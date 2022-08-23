@@ -29,11 +29,23 @@ public class TC1_lactors_getText {
         //To auto generate local variable
         //Mac: option + enter
         //Windows: alt + enter
-
+        WebElement inputPassword=driver.findElement(By.name("USER_PASSWORD")) ;
+        inputPassword.sendKeys("incorrect");
 
         //5- Click to log in button.
+        WebElement loginButton= driver.findElement(By.className("login-btn"));
+        loginButton.click();
 
         //6- Verify error message text is as expected:
         //Expected: Incorrect login or password
+        WebElement errorMessage= driver.findElement(By.className("errortext"));
+
+        String expectedErrorMessage= "Incorrect login or password";
+        String actualErrorMessage= errorMessage.getText();
+
+        if(actualErrorMessage.equals((expectedErrorMessage))){
+            System.out.println("ErRor Message verification is PASSED!!");
+        }else
+            System.out.println("ErRor Message verification is FAİLED!!");
     }
 }
