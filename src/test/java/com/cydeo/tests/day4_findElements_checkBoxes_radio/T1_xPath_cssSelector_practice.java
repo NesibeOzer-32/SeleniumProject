@@ -33,27 +33,25 @@ public class T1_xPath_cssSelector_practice {
         WebElement header_ex1= driver.findElement(By.cssSelector("div.example>h2"));
 
         //Locate header using xpath, and using web elements text "Forgot Password"
+        //WebElement header_ex2 = driver.findElement(By.xpath("//h2[.()='Forgot Password']"));(text = " . ")
         WebElement header_ex2 = driver.findElement(By.xpath("//h2[text()='Forgot Password']"));
 
-
         //c. “E-mail” text
-
+        WebElement emailLabel= driver.findElement(By.xpath("//label[@for='email']"));
 
         //d. E-mail input box
+        WebElement inputBox_ex1 = driver.findElement(By.xpath("//input[@type='text']"));
 
-
-        //Locate inputBox using xpath contains method
-
-        //tagName[contains(@attribute,'value')]
-
-
+        //Locate inputBox using xpath contains method(tagName[contains(@attribute,'value')])
+        WebElement inputBox_ex2 = driver.findElement(By.xpath("//input[@type='text']"));
 
         //e. “Retrieve password” button
         //button[@type='submit']
         //button[@class='radius']
-
+        WebElement retrievePasswordBtn= driver.findElement(By.xpath("//button[@id='form_submit']"));
 
         //f. “Powered by Cydeo text
+        WebElement PoweredByCydeoText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
 
 
         //4. Verify all web elements are displayed.
