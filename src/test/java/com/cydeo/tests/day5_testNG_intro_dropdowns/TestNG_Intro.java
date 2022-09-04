@@ -14,11 +14,12 @@ public class TestNG_Intro {
     public void  tearDownMethod(){
         System.out.println("---> After Method is running!");
     }
-    @Test
+    //priority : hangi sırayla kod okunacak 1 ilk altlarda dahi olsa
+    @Test(priority = 1)
     public void test1(){
         System.out.println("Test 1 is running...");
     }
-    @Test
+    @Test(priority = 2)
     public void test2(){
         System.out.println("Test 2 is running...");
 
