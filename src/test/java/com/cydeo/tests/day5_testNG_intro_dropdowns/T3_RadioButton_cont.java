@@ -25,18 +25,9 @@ public class T3_RadioButton_cont {
 
         clickAndVerifyRadioButton(driver,"color","yellow");
 
-
-
-
-
-
-
-
-
     }
 
-    private static void clickAndVerifyRadioButton(WebDriver driver,
-                                                  String nameAttribute, String idValue){
+    private static void clickAndVerifyRadioButton(WebDriver driver, String nameAttribute, String idValue){
         List<WebElement> radioButtons= driver.findElements(By.name(nameAttribute));
 
         //Loop through the list of WebElement and select matching result "hockey"
