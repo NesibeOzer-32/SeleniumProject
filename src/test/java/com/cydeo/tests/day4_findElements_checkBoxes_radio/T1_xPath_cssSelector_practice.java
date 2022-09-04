@@ -54,12 +54,12 @@ public class T1_xPath_cssSelector_practice {
         WebElement PoweredByCydeoText = driver.findElement(By.xpath("//div[@style='text-align: center;']"));
 
         //4. Verify all web elements are displayed.
-
-        System.out.println("homeLink_ex1.isDisplayed(): " +homeLink_ex1.isDisplayed());
-        System.out.println("header_ex1.isDisplayed() = " + header_ex1.isDisplayed());
+        System.out.println("homeLink_ex2.isDisplayed() = " + homeLink_ex2.isDisplayed());
+        System.out.println("header_ex2.isDisplayed() = " + header_ex2.isDisplayed());
         System.out.println("emailLabel.isDisplayed() = " + emailLabel.isDisplayed());
-        System.out.println("inputBox_ex1.isDisplayed() = " + inputBox_ex1.isDisplayed());
+        System.out.println("inputBox_ex2.isDisplayed() = " + inputBox_ex2.isDisplayed());
         System.out.println("retrievePasswordBtn.isDisplayed() = " + retrievePasswordBtn.isDisplayed());
+        System.out.println("PoweredByCydeoText.isDisplayed() = " + PoweredByCydeoText.isDisplayed());
         System.out.println("PoweredByCydeoText.isDisplayed() = " + PoweredByCydeoText.isDisplayed());
     }
 }
