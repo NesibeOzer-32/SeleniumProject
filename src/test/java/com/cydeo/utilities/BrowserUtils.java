@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class BrowserUtils {
     /*
@@ -55,10 +56,13 @@ public class BrowserUtils {
 
     Assert.assertEquals(driver.getTitle(),expectedTitle);
 }
-
-
-
      /*
     Creating a utility method for ExplicitWait, so we don't have to repeat the lines
      */
+    public static void  ExplicitWait(WebDriver driver, int sec){
+        driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
+
+    }
+
+
 }
