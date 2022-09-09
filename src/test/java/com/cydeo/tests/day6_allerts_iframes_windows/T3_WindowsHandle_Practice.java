@@ -71,6 +71,9 @@ public class T3_WindowsHandle_Practice {
         actualTitle=driver.getTitle();
         System.out.println("Title after click: " + expectedTitle);
 
+        //İf we want to go back to main page,we can use already stored main handle
+        //driver.switchTo().window(mainHandle);
+
     }
     @AfterMethod
     public void tearDown(){
