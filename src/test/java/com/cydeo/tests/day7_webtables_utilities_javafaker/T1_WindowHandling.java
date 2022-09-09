@@ -32,6 +32,8 @@ public class T1_WindowHandling {
         ((JavascriptExecutor) driver).executeScript("window.open('https://etsy.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('https://facebook.com','_blank');");
 
+        
+
         //4. Create a logic to switch to the tab where Etsy.com is
 
         Set <String> allWindowsHandles= driver.getWindowHandles();
