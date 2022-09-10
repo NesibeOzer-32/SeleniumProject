@@ -1,5 +1,6 @@
 package com.cydeo.tests.day8_properties_config_reader;
 
+import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -15,7 +16,11 @@ public class T2_Config_Practice {
     public WebDriver driver;
     @BeforeMethod
     public void setUpMethod(){
-        driver= WebDriverFactory.getDriver("chrome");
+
+        //We are getting the browserType dynamically from our configuration.properties file
+        String BrowserType= ConfigurationReader.getProperty("browser");
+
+        driver= WebDriverFactory.getDriver(BrowserType);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         //1. Go to : "https://practice.cydeo.com/web-tables"
@@ -30,10 +35,12 @@ public class T2_Config_Practice {
         googleSearchBox.sendKeys("apple"+ Keys.ENTER);
 
         //4-Verify Title
-        //Expected : "apple - Google Search"
-        String expectedTitle= "apple - Google Search";
+        //Expected : "apple - Google Zoeken"
+        String expectedTitle= "apple - Google Zoeken";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(actualTitle,expectedTitle);
+
+
     }
 }
