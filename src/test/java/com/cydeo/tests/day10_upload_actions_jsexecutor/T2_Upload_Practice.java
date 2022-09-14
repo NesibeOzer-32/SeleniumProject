@@ -18,9 +18,6 @@ public class T2_Upload_Practice {
         //2. Find some small file from your computer, and get the path of it.
         String path = "C:\\Users\\kantoor\\Desktop\\HTML CLASS\\mini.jpg";
 
-        /*
-        String path ="C:\\Users\\hayat\\Desktop\\note.txt";
-         */
 
         //3. Upload the file.
         WebElement fileUpload = Driver.getDriver().findElement(By.xpath("//input[@id='file-upload']"));
