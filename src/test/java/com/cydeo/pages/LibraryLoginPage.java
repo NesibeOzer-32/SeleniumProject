@@ -7,15 +7,16 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LibraryLoginPage {
 
-    //#1-initialize the driver instance and object of the class
+    //#1- initialize the driver instance and object of the class
     public LibraryLoginPage(){
-        /*initElements method will create connection in between the current deriver sessioin (instance)
-        and the object of the current class.
-        */
-        PageFactory.initElements(Driver.getDriver(),this);
-
+        /*initElements method will create connection in between the current
+        driver session (instance) and the object of the current class.
+         */
+        PageFactory.initElements(Driver.getDriver(), this);
     }
-    //#2-use @FindBy annotation to locate web elements
+
+
+    //#2- use @FindBy annotation to locate web elements
 
     @FindBy(xpath = "//input[@id='inputEmail']")
     public WebElement inputUsername;
